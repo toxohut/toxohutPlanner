@@ -5,7 +5,7 @@ namespace Planner.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Planner.Model>
+    internal sealed class Configuration : DbMigrationsConfiguration<Planner.PlannerContext>
     {
         public Configuration()
         {
@@ -13,7 +13,7 @@ namespace Planner.Migrations
             SetSqlGenerator("MySql.Data.MySqlClient", new MySql.Data.Entity.MySqlMigrationSqlGenerator());
         }
 
-        protected override void Seed(Planner.Model context)
+        protected override void Seed(Planner.PlannerContext context)
         {
             //  This method will be called after migrating to the latest version.
 

@@ -171,6 +171,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MeetingsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -178,9 +179,34 @@
     <Compile Include="Migrations\201807051543026_mig1.Designer.cs">
       <DependentUpon>201807051543026_mig1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807070805200_mig2.cs" />
+    <Compile Include="Migrations\201807070805200_mig2.Designer.cs">
+      <DependentUpon>201807070805200_mig2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807101706110_mig3.cs" />
+    <Compile Include="Migrations\201807101706110_mig3.Designer.cs">
+      <DependentUpon>201807101706110_mig3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807141137360_mig4.cs" />
+    <Compile Include="Migrations\201807141137360_mig4.Designer.cs">
+      <DependentUpon>201807141137360_mig4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807171458094_mig5.cs" />
+    <Compile Include="Migrations\201807171458094_mig5.Designer.cs">
+      <DependentUpon>201807171458094_mig5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807181642571_mig-7.cs" />
+    <Compile Include="Migrations\201807181642571_mig-7.Designer.cs">
+      <DependentUpon>201807181642571_mig-7.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Model.cs" />
-    <Compile Include="Models\Models.cs" />
+    <Compile Include="Models\Event.cs" />
+    <Compile Include="Models\Expense.cs" />
+    <Compile Include="Models\Guest.cs" />
+    <Compile Include="Models\Meeting.cs" />
+    <Compile Include="Models\PlannerContext.cs" />
+    <Compile Include="Models\Status.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -216,10 +242,15 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_GeneralLayout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Meetings\Create.cshtml" />
+    <Content Include="Views\Meetings\Delete.cshtml" />
+    <Content Include="Views\Meetings\Details.cshtml" />
+    <Content Include="Views\Meetings\Edit.cshtml" />
+    <Content Include="Views\Meetings\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -240,6 +271,21 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201807051543026_mig1.resx">
       <DependentUpon>201807051543026_mig1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807070805200_mig2.resx">
+      <DependentUpon>201807070805200_mig2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807101706110_mig3.resx">
+      <DependentUpon>201807101706110_mig3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807141137360_mig4.resx">
+      <DependentUpon>201807141137360_mig4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807171458094_mig5.resx">
+      <DependentUpon>201807171458094_mig5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807181642571_mig-7.resx">
+      <DependentUpon>201807181642571_mig-7.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
