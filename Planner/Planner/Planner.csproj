@@ -170,34 +170,22 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\EventsController.cs" />
+    <Compile Include="Controllers\ExpensesController.cs" />
+    <Compile Include="Controllers\GuestsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MeetingsController.cs" />
+    <Compile Include="Controllers\StatusController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="Controllers\VotesController.cs" />
+    <Compile Include="Controllers\VotingAnswersController.cs" />
+    <Compile Include="Controllers\VotingsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807051543026_mig1.cs" />
-    <Compile Include="Migrations\201807051543026_mig1.Designer.cs">
-      <DependentUpon>201807051543026_mig1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807070805200_mig2.cs" />
-    <Compile Include="Migrations\201807070805200_mig2.Designer.cs">
-      <DependentUpon>201807070805200_mig2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807101706110_mig3.cs" />
-    <Compile Include="Migrations\201807101706110_mig3.Designer.cs">
-      <DependentUpon>201807101706110_mig3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807141137360_mig4.cs" />
-    <Compile Include="Migrations\201807141137360_mig4.Designer.cs">
-      <DependentUpon>201807141137360_mig4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807171458094_mig5.cs" />
-    <Compile Include="Migrations\201807171458094_mig5.Designer.cs">
-      <DependentUpon>201807171458094_mig5.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807181642571_mig-7.cs" />
-    <Compile Include="Migrations\201807181642571_mig-7.Designer.cs">
-      <DependentUpon>201807181642571_mig-7.cs</DependentUpon>
+    <Compile Include="Migrations\201807280924073_mig1.cs" />
+    <Compile Include="Migrations\201807280924073_mig1.Designer.cs">
+      <DependentUpon>201807280924073_mig1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Event.cs" />
@@ -207,6 +195,9 @@
     <Compile Include="Models\PlannerContext.cs" />
     <Compile Include="Models\Status.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\Vote.cs" />
+    <Compile Include="Models\Voting.cs" />
+    <Compile Include="Models\VotingAnswer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -232,7 +223,9 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -246,11 +239,51 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Events\Create.cshtml" />
+    <Content Include="Views\Events\Delete.cshtml" />
+    <Content Include="Views\Events\Details.cshtml" />
+    <Content Include="Views\Events\Edit.cshtml" />
+    <Content Include="Views\Events\Index.cshtml" />
     <Content Include="Views\Meetings\Create.cshtml" />
     <Content Include="Views\Meetings\Delete.cshtml" />
     <Content Include="Views\Meetings\Details.cshtml" />
     <Content Include="Views\Meetings\Edit.cshtml" />
     <Content Include="Views\Meetings\Index.cshtml" />
+    <Content Include="Views\Expenses\Create.cshtml" />
+    <Content Include="Views\Expenses\Delete.cshtml" />
+    <Content Include="Views\Expenses\Details.cshtml" />
+    <Content Include="Views\Expenses\Edit.cshtml" />
+    <Content Include="Views\Expenses\Index.cshtml" />
+    <Content Include="Views\Guests\Create.cshtml" />
+    <Content Include="Views\Guests\Delete.cshtml" />
+    <Content Include="Views\Guests\Details.cshtml" />
+    <Content Include="Views\Guests\Edit.cshtml" />
+    <Content Include="Views\Guests\Index.cshtml" />
+    <Content Include="Views\Users\Create.cshtml" />
+    <Content Include="Views\Users\Delete.cshtml" />
+    <Content Include="Views\Users\Details.cshtml" />
+    <Content Include="Views\Users\Edit.cshtml" />
+    <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Views\Status\Create.cshtml" />
+    <Content Include="Views\Status\Delete.cshtml" />
+    <Content Include="Views\Status\Details.cshtml" />
+    <Content Include="Views\Status\Edit.cshtml" />
+    <Content Include="Views\Status\Index.cshtml" />
+    <Content Include="Views\Votings\Create.cshtml" />
+    <Content Include="Views\Votings\Delete.cshtml" />
+    <Content Include="Views\Votings\Details.cshtml" />
+    <Content Include="Views\Votings\Edit.cshtml" />
+    <Content Include="Views\Votings\Index.cshtml" />
+    <Content Include="Views\VotingAnswers\Create.cshtml" />
+    <Content Include="Views\VotingAnswers\Delete.cshtml" />
+    <Content Include="Views\VotingAnswers\Details.cshtml" />
+    <Content Include="Views\VotingAnswers\Edit.cshtml" />
+    <Content Include="Views\VotingAnswers\Index.cshtml" />
+    <Content Include="Views\Votes\Create.cshtml" />
+    <Content Include="Views\Votes\Delete.cshtml" />
+    <Content Include="Views\Votes\Details.cshtml" />
+    <Content Include="Views\Votes\Edit.cshtml" />
+    <Content Include="Views\Votes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -269,23 +302,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201807051543026_mig1.resx">
-      <DependentUpon>201807051543026_mig1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807070805200_mig2.resx">
-      <DependentUpon>201807070805200_mig2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807101706110_mig3.resx">
-      <DependentUpon>201807101706110_mig3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807141137360_mig4.resx">
-      <DependentUpon>201807141137360_mig4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807171458094_mig5.resx">
-      <DependentUpon>201807171458094_mig5.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807181642571_mig-7.resx">
-      <DependentUpon>201807181642571_mig-7.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201807280924073_mig1.resx">
+      <DependentUpon>201807280924073_mig1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

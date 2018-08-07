@@ -14,5 +14,6 @@ namespace Planner.Models
         public virtual Meeting Meeting { get; set; }
         public virtual ICollection<Guest> Guests { get; set; }
         public virtual Status Status { get; set; }
+        public virtual Expense ExpenseId { get; set; }
     }
 }

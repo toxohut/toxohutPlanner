@@ -22,8 +22,27 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Meetings", "Index", "Meetings")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+
+                    <li>@Html.ActionLink("Meetings", "Index", "Meetings")</li>
+                    <li>@Html.ActionLink("Events", "Index", "Events")</li>
+                    <li>@Html.ActionLink("Status", "Index", "Status")</li>
+                    <li>@Html.ActionLink("Users", "Index", "Users")</li>
+                    <li>@Html.ActionLink("Guests", "Index", "Guests")</li>
+                    <li>@Html.ActionLink("Expenses", "Index", "Expenses")</li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Votes
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Voting", "Index", "Votings")</li>
+                            <li>@Html.ActionLink("VotingAnswer", "Index", "VotingAnswers")</li>
+                            <li>@Html.ActionLink("Vote", "Index", "Votes")</li>
+                        </ul>
+                    </li>
+                    
+
                 </ul>
             </div>
         </div>

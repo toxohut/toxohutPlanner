@@ -6,13 +6,13 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Planner;
 using Planner.Models;
 
 namespace Planner.Controllers
 {
     public class MeetingsController : Controller
     {
-        //        private PlannerContext db = new PlannerContext();
         private PlannerContext db = new PlannerContext();
 
         // GET: Meetings
@@ -47,7 +47,7 @@ namespace Planner.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "MeetingId,Name")] Meeting meeting)
+        public ActionResult Create([Bind(Include = "MeetingId,Name,Description")] Meeting meeting)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace Planner.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "MeetingId,Name")] Meeting meeting)
+        public ActionResult Edit([Bind(Include = "MeetingId,Name,Description")] Meeting meeting)
         {
             if (ModelState.IsValid)
             {

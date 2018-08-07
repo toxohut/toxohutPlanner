@@ -10,6 +10,7 @@ namespace Planner.Models
     {
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int ExpenseId { get; set; }
+        public virtual Meeting MeetingId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         //todo: kategoria

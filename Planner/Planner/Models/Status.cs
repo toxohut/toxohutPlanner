@@ -10,7 +10,7 @@ namespace Planner.Models
     {
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int StatusId { get; set; }
-        public int GroupId { get; set; }//do czego są te statusy, czy do spotkania czy do gosci
+        public int TableId { get; set; }//do czego są te statusy, czy do spotkania czy do gosci
         public string Name { get; set; }
     }
 }

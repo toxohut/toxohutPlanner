@@ -15,5 +15,6 @@ namespace Planner.Models
         public string Description { get; set; }
         public virtual ICollection<Event> Events { get; set; }
         public virtual ICollection<Guest> Guests { get; set; }
+        public virtual ICollection<Expense> Expenses { get; set; }        
     }
 }

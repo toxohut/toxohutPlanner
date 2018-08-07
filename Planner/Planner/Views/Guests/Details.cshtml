@@ -1,0 +1,51 @@
+﻿@model Planner.Models.Guest
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_GeneralLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Guest</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Invited)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Invited)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Coming)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Coming)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.GuestId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
